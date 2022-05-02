@@ -3,7 +3,7 @@ import CustomInput from "./CustomInput";
 import CustomOutput from "./CustomOutput";
 import WeeklyInput from "./WeeklyInput";
 import WeeklyOutput from "./WeeklyOutput"
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import {getIndicatorsStartToEndDate, getWeeklyIndicators} from "./utils";
 
 function Board() {
@@ -15,7 +15,7 @@ function Board() {
   const [month, setMonth] = useState(new Date().getMonth())
   const [weeklyConversionInfo, setWeeklyConversionInfo] = useState()
 
-  const styledButton = styled.Button`
+  const TestButton = styled.button`
     padding: 0.375rem 0.75rem;
     border-radius: 0.25rem;
     font-size: 1rem;
@@ -45,12 +45,12 @@ function Board() {
   return (
     <>
       <div>
-        <styledButton onClick={handleWeeklyButton}>
+        <TestButton onClick={handleWeeklyButton}>
           주별로 보기
-        </styledButton>
-        <styledButton onClick={handleCustomButton}>
+        </TestButton>
+        <TestButton onClick={handleCustomButton}>
           특정 시간 검색하기
-        </styledButton>
+        </TestButton>
       </div>
       {
         isWeekly ?
